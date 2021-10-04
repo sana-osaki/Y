@@ -1,0 +1,50 @@
+version: '3'
+services:
+  api:
+    image: composer:2.1.5
+    volumes:
+      - ./api:/app
+      - api-vendor:/app/topicsLab/vendor
+    ports:
+      - 8000:8000
+    tty: true
+    command: >
+      bash -c "docker-php-ext-install pdo_mysql
+      && cd /app/topicsLab
+      && composer install
+      && php artisan migrate
+      && echo "finished"
+      && /bin/bash"
+    working_dir: "/app/topicsLab"
+    depends_on:
+      - db
+  front:
+    image: node:16.6.1
+    volumes:
+      - ./front:/app
+      - front-node_modules:/app/topicslab/node_modules
+    ports:
+      - 8080:8080
+    tty: true
+    command: >
+      bash -c "
+      cd /app/topicslab/
+      && yarn install
+      && echo "finished"
+      && /bin/bash"
+    working_dir: "/app/topicslab"
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+volumes:
+  mysql-data:
+  api-vendor:
+  front-node_modules:
