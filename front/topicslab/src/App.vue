@@ -1,19 +1,11 @@
 <template>
   <div id="nav">
-<<<<<<< HEAD
     <router-link to="/">ホーム11</router-link> |
-=======
-    <router-link to="/">ホーム１</router-link> |
->>>>>>> ccc
     <template v-if="authenticated">
       <a>mypage</a>
     </template>
     <template v-else>
-<<<<<<< HEAD
-      <router-link to="/login">ログイン11</router-link>
-=======
       <router-link to="/login">ログイン</router-link>
->>>>>>> ccc
     </template>
   </div>
   <div class="content">
@@ -23,17 +15,17 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
-      authenticated: false,
-    };
+      authenticated: false
+    }
   },
   watch: {
-    $route() {
-      this.authenticated = localStorage.getItem("authenticated") === "true";
-    },
-  },
-};
+    $route () {
+      this.authenticated = localStorage.getItem('authenticated') === 'true'
+    }
+  }
+}
 </script>
 
 <style lang="scss">
