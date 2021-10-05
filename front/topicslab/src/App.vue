@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">Ho6me</router-link> |
     <template v-if="authenticated">
       <a>mypage</a>
     </template>
