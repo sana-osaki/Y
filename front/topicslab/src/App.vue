@@ -9,34 +9,35 @@
     </template>
   </div>
   <div class="content">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      authenticated: false
-    }
+      authenticated: false,
+    };
   },
   watch: {
-    $route () {
-      this.authenticated = localStorage.getItem('authenticated') === 'true'
-    }
-  }
-}
+    $route() {
+      this.authenticated = localStorage.getItem("authenticated") === "true";
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-html, body {
+html,
+body {
   height: 100%;
   min-height: 100%;
 }
 
 body {
   margin: 0;
-  background: linear-gradient(-135deg, #E4A972, #9941D8);
+  background: linear-gradient(-135deg, #e4a972, #9941d8);
   background-attachment: fixed;
 }
 
