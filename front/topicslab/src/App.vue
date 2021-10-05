@@ -1,17 +1,24 @@
 <template>
   <div id="nav">
+
    
     <router-link to="/">3HOMEWORK3</router-link> |
+
+
+    <router-link to="/">ホーム11</router-link> |
 
     <template v-if="authenticated">
       <a>mypage</a>
     </template>
     <template v-else>
+
       <router-link to="/login">2login2</router-link>
+      <router-link to="/login">ログイン</router-link>
+
     </template>
   </div>
   <div class="content">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -31,14 +38,15 @@ export default {
 </script>
 
 <style lang="scss">
-html, body {
+html,
+body {
   height: 100%;
   min-height: 100%;
 }
 
 body {
   margin: 0;
-  background: linear-gradient(-135deg, #E4A972, #9941D8);
+  background: linear-gradient(-135deg, #e4a972, #9941d8);
   background-attachment: fixed;
 }
 
