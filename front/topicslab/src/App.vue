@@ -11,6 +11,7 @@
   <div class="content">
     <router-view/>
   </div>
+  <small>&copy 2021 TBC_Y</small>
 </template>
 
 <script>
