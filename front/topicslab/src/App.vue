@@ -1,11 +1,11 @@
 <template>
   <div id="nav">
-    <router-link to="/">ホーム１</router-link> |
+    <router-link to="/">ホーム</router-link> |
     <template v-if="authenticated">
       <a>mypage</a>
     </template>
     <template v-else>
-      <router-link to="/login">ログイン１</router-link>
+      <router-link to="/login">ログイン</router-link>
     </template>
   </div>
   <div class="content">
