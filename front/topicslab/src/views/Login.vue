@@ -15,7 +15,7 @@
             <InputText id="password" type="password" v-model="password" />
           </div>
         </div>
-        <span>{{message}}</span>
+        <span class ="error">{{message}}</span>
         <div class="p-field">
           <Button icon="pi pi-check" label="Login" v-on:click="login" />
         </div>
@@ -87,5 +87,8 @@ export default {
       width: 100%;
     }
   }
+}
+.error {
+  color: red;
 }
 </style>
