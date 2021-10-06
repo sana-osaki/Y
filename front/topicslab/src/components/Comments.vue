@@ -6,6 +6,7 @@
       </template>
       <div class="comment-text">
         {{comment.body}}
+        <span><Button icon="pi pi-heart" class="p-button-rounded p-button-help" /></span>
       </div>
     </Fieldset>
   </div>
