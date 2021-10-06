@@ -19,6 +19,9 @@
         <div class="p-field">
           <Button icon="pi pi-check" label="Login" v-on:click="login" />
         </div>
+        <div>
+          <a href="Register">新規会員登録はこちら</a>
+        </div>
       </template>
     </Card>
   </div>
