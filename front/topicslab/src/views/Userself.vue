@@ -7,6 +7,10 @@
       <template #content>
         {{user.name}}
       </template>
+      <TabView>
+        <TabPanel header="Header I">トピック
+        </TabPanel>
+      </TabView>
       <template #footer>
         <Button label="Create Topic" v-on:click="toNewTopic" />
         <Button label="Logout" class="p-button-warning" v-on:click="logout" />
