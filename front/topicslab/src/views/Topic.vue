@@ -17,20 +17,6 @@
     </Card>
     <Comments :comments="this.comments" />
     <CommentForm :topicId="this.topic.id" @sentComment="receiveComment" />
-    <button class="btn btn-like">
-    <span class="btn-icon btn--icon-default">
-        <span class="fa fa-heart"></span>
-    </span>
-    <span class="btn-icon btn--icon-liked">
-        <span class="fa fa-heart"></span>
-    </span>
-    <span class="btn-content  btn-content--liked">
-        Liked
-    </span>
-    <span class="btn-content btn-content--default">
-        Like
-    </span>
-</button>
   </div>
 </template>
 
@@ -54,6 +40,10 @@ export default {
     }
   },
   mounted () {
+    if (localStorage.getItem('authenticated') !== 'true') {
+      this.$router.push('/login')
+      return
+    }
     this.id = this.$route.params.id
     if (!this.id) {
       alert('不正なIDです。')
