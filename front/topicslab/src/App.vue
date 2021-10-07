@@ -11,7 +11,7 @@
   <div class="content">
     <router-view/>
   </div>
-  <small>Copyright &copy; 2021 TBC_Y</small>
+  <p><small>Copyright &copy; 2021 TBC_Y</small></p>
 </template>
 
 <script>
@@ -41,6 +41,9 @@ body {
   background-attachment: fixed;
 }
 
+p {
+  text-align: center;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
