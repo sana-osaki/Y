@@ -11,10 +11,10 @@
         <Button label="Create Topic" v-on:click="toNewTopic" />
         <Button label="Logout" class="p-button-warning" v-on:click="logout" />
         <Button label="Withdraw" class="p-button-danger" v-on:click="withdraw" />
-      </template> */
+      </template>
     </Card>
   </div>
-</template>
+<div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="tab">
       <button class="tablinks" onclick="openTopic(event, 'Topic1')">Topic1</button>
@@ -33,6 +33,8 @@
       <h3>Topic3</h3>
       <p>Topic3の内容がここに表示されます。</p>
     </div>
+  </div>
+</template>
 
 <script>
 import axios from '@/supports/axios'
