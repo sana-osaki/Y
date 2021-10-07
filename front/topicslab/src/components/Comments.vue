@@ -3,7 +3,7 @@
     <Fieldset v-for="comment in comments" :key="comment.id">
       <template #legend>
         <span>
-          {{comment.user.name}}
+         {{comment.user.name}}
         </span>
       </template>
       <div class="comment-text">
