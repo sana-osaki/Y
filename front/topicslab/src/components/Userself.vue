@@ -13,42 +13,13 @@
         <Button label="Withdraw" class="p-button-danger" v-on:click="withdraw" />
       </template>
     </Card>
-<<<<<<< user_Topic
     <Tab /> 
-=======
-  </div>
-<div>
-<Tab />
-/**<meta name="viewport" content="width=device-width, initial-scale=1">
-    <div class="tab">
-      <button class="tablinks" onclick="openTopic(event, 'Topic1')">Topic1</button>
-      <button class="tablinks" onclick="openTopic(event, 'Topic2')">Topic2</button>
-      <button class="tablinks" onclick="openTopic(event, 'Topic3')">Topic3</button>
-    </div>
-    <div id="Topic1" class="tabcontent">
-      <h3>Topic1</h3>
-      <p>Topic1の内容がここに表示されます。</p>
-    </div>
-    <div id="Topic2" class="tabcontent">
-      <h3>Topic2</h3>
-      <p>Topic2の内容がここに表示されます。</p>
-    </div>
-    <div id="Topic3" class="tabcontent">
-      <h3>Topic3</h3>
-      <p>Topic3の内容がここに表示されます。</p>
-    </div>
-  */
->>>>>>> local
   </div>
 </template>
 
 <script>
 import axios from '@/supports/axios'
-<<<<<<< user_Topic
 import Tab from '@/components/Tab'
-=======
-import Tab from '@/commponents/Tab'
->>>>>>> local
 
 export default {
   name: 'Userself',
