@@ -5,8 +5,8 @@
         {{user.name}}
       </template>
     </Card>
+    <Tab />  
   </div>
-  <Tab />
 </template>
 
 <script>
