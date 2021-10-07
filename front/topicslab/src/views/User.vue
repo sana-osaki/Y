@@ -40,9 +40,10 @@ export default {
       user: {}
     }
   },
+
   mounted () {
     if (localStorage.getItem('authenticated') !== 'true') {
-      this.$router.push('login')
+      this.$router.push('/login')
       return
     }
     this.id = this.$route.params.id
@@ -51,6 +52,7 @@ export default {
     }
     this.getUser()
   },
+
   methods: {
     getUser () {
       axios.get('/sanctum/csrf-cookie')
