@@ -51,30 +51,17 @@ class UserController extends Controller
      * @param  User  $user
      * @return \Illuminate\Http\Response
      */
-<<<<<<< user_Topic
+
     public function show(User $user)
     {
         return $user;
     }
-=======
-    /** 元のやつ
+    
      public function show(User $user)
     {
         return $user;
     }
-    */
-    /** TopicControllerのshow
-    public function show(Topic $topic)
-    {
-        return Topic::with('user', 'comments.user')->find($topic->id);
-    }
-    */
-    public function show(User $user)
-    {
-        return Topic::with('user', 'comments.user')->find($topic->id);
-    }
-
->>>>>>> local
+    
 
     /**
      * Show the form for editing the specified resource.
