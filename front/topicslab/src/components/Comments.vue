@@ -2,11 +2,15 @@
   <div>
     <Fieldset v-for="comment in comments" :key="comment.id">
       <template #legend>
-        <span>{{comment.user.name}}</span>
+        <span>
+          {{comment.user.name}}
+        </span>
       </template>
       <div class="comment-text">
         {{comment.body}}
-        <span><Button icon="pi pi-heart" class="p-button-rounded p-button-help" /></span>
+        <span>
+          <Button icon="pi pi-heart" class="p-button-rounded p-button-help" />
+        </span>
       </div>
     </Fieldset>
   </div>
