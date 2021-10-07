@@ -51,9 +51,15 @@ class UserController extends Controller
      * @param  User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    /** 
+     public function show(User $user)
     {
         return $user;
+    }
+    */
+    public function show(Topic $topic)
+    {
+        return Topic::with('user', 'comments.user')->find($topic->id);
     }
 
     /**
