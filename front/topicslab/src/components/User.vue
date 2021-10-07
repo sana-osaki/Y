@@ -7,11 +7,16 @@
     </Card>
     <Tab />  
   </div>
+  <Tab />
 </template>
 
 <script>
 import axios from '@/supports/axios'
+<<<<<<< user_Topic
 import Tab from '@/components/Tab'
+=======
+import Tab from '@/commponents/Tab'
+>>>>>>> local
 
 export default {
   name: 'user',
