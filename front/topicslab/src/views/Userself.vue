@@ -2,25 +2,25 @@
   <div>
     <Card>
       <template #title>
-        mypage
+        マイぺージ
       </template>
       <template #content>
         <!-- {{user.name}} -->
         {{user.topics}}
       </template>
       <template #footer>
-        <Button label="Create Topic" v-on:click="toNewTopic" />
-        <Button label="Logout" class="p-button-warning" v-on:click="logout" />
-        <Button label="Withdraw" class="p-button-danger" v-on:click="withdraw" />
+        <Button label="トピック作成" v-on:click="toNewTopic" />
+        <Button label="ログアウト" class="p-button-warning" v-on:click="logout" />
+        <Button label="退会" class="p-button-danger" v-on:click="withdraw" />
       </template>
     </Card>
   </div>
 <div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="tab">
-      <button class="tablinks" onclick="openTopic(event, 'Topic1')">Topic1</button>
-      <button class="tablinks" onclick="openTopic(event, 'Topic2')">Topic2</button>
-      <button class="tablinks" onclick="openTopic(event, 'Topic3')">Topic3</button>
+      <button class="tablinks" onclick="openTopic(event, 'Topic1')">トピック１</button>
+      <button class="tablinks" onclick="openTopic(event, 'Topic2')">トピック２</button>
+      <button class="tablinks" onclick="openTopic(event, 'Topic3')">トピック３</button>
     </div>
     <div id="Topic1" class="tabcontent">
       <h3>Topic1</h3>
