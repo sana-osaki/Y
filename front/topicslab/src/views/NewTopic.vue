@@ -89,10 +89,8 @@ export default {
   width: 100%;
 }
 
-.p-field {
-  .error {
+.error {
   color: red;
   }
-}
 
 </style>

@@ -52,6 +52,7 @@ export default {
               if (res.status === 200) {
                 console.log('ログイン成功')
                 localStorage.setItem('authenticated', 'true')
+                location.href = '/'
               } else {
                 this.message = 'ログインに失敗しました。'
               }

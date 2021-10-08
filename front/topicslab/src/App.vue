@@ -2,7 +2,7 @@
   <div id="nav">
     <router-link to="/">ホーム</router-link> |
     <template v-if="authenticated">
-      <router-link to="/Userself"><a>mypage</a></router-link>
+      <router-link to="/mypage"><a>mypage</a></router-link>
     </template>
     <template v-else>
       <router-link to="/login">ログイン</router-link>
@@ -11,7 +11,7 @@
   <div class="content">
     <router-view/>
   </div>
-  <small>Copyright &copy; 2021 TBC_Y</small>
+  <p><small>Copyright &copy; 2021 TBC_Y</small></p>
 </template>
 
 <script>
@@ -41,6 +41,9 @@ body {
   background-attachment: fixed;
 }
 
+p {
+  text-align: center;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -56,7 +56,6 @@ class UserController extends Controller
     {
         return $user;
     }
-    
 
     /**
      * Show the form for editing the specified resource.
