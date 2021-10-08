@@ -17,7 +17,7 @@
         </div>
         <span class ="error">{{message}}</span>
         <div class="p-field">
-          <Button icon="pi pi-check" label="ログイン" v-on:click="login" />
+          <Button icon="pi pi-check" label="login" v-on:click="login" />
         </div>
         <div>
           <router-link to="/register">新規会員登録はこちら</router-link>
