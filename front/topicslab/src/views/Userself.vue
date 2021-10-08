@@ -13,10 +13,10 @@
         <Button label="ログアウト" class="p-button-warning" v-on:click="logout" />
         <Button label="退会" class="p-button-danger" v-on:click="withdraw" />
       </template>
+      <Tab2 />
     </Card>
   </div>
-  <Tab/>
-<!-- <div>
+<div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="tab">
       <button class="tablinks" onclick="openTopic(event, 'Topic1')">トピック１</button>
@@ -35,7 +35,7 @@
       <h3>Topic3</h3>
       <p>Topic3の内容がここに表示されます。</p>
     </div>
-  </div>-->
+  </div>
 </template>
 
 <script>

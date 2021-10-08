@@ -2,7 +2,7 @@
   <div>
     <Card>
       <template #content>
-       {{user.name}}
+       <!-- {{user.name}} -->
         <!-- {{user.topics}} -->
         <!-- {{user.comments.id}} -->
         <!-- {{topics}} -->
@@ -20,20 +20,20 @@
   <!-- <Tab /> -->
  <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="tab">
-      <button class="tablinks" onclick="openTopic(event, 'Topic1')">トピック1</button>
-      <button class="tablinks" onclick="openTopic(event, 'Topic2')">トピック2</button>
-      <button class="tablinks" onclick="openTopic(event, 'Topic3')">トピック3</button>
+      <button class="tablinks" onclick="openTopic(event, 'Topic1')">Topic1</button>
+      <button class="tablinks" onclick="openTopic(event, 'Topic2')">Topic2</button>
+      <button class="tablinks" onclick="openTopic(event, 'Topic3')">Topic3</button>
     </div>
     <div id="Topic1" class="tabcontent">
-      <h3>Topic1</h3>
+      <h3>トピック1</h3>
       <p>Topic1の内容がここに表示されます。</p>
     </div>
     <div id="Topic2" class="tabcontent">
-      <h3>Topic2</h3>
+      <h3>トピック2</h3>
       <p>Topic2の内容がここに表示されます。</p>
     </div>
     <div id="Topic3" class="tabcontent">
-      <h3>Topic3</h3>
+      <h3>トピック3</h3>
       <p>Topic3の内容がここに表示されます。</p>
     </div>
 </template>
