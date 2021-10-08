@@ -2,8 +2,8 @@
   <div>
     <Card>
       <template #content>
-        {{user.name}}
-        {{user.topics}}
+       {{user.name}}
+        <!-- {{user.topics}} -->
         <!-- {{user.comments.id}} -->
         <!-- {{topics}} -->
         <!-- {{user.comments}} -->
@@ -17,7 +17,8 @@
       </TabView>
     </Card>
   </div>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <Tab /> -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="tab">
       <button class="tablinks" onclick="openTopic(event, 'Topic1')">トピック1</button>
       <button class="tablinks" onclick="openTopic(event, 'Topic2')">トピック2</button>
