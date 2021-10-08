@@ -15,7 +15,8 @@
       </template>
     </Card>
   </div>
-<div>
+  <Tab/>
+<!-- <div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="tab">
       <button class="tablinks" onclick="openTopic(event, 'Topic1')">トピック１</button>
@@ -34,7 +35,7 @@
       <h3>Topic3</h3>
       <p>Topic3の内容がここに表示されます。</p>
     </div>
-  </div>
+  </div>-->
 </template>
 
 <script>
