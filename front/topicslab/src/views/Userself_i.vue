@@ -13,8 +13,7 @@
         <Button label="Withdraw" class="p-button-danger" v-on:click="withdraw" />
       </template>
     </Card>
-    <Tab />
-    </div>
+  </div>
 <div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="tab">
@@ -34,13 +33,11 @@
       <h3>Topic3</h3>
       <p>Topic3の内容がここに表示されます。</p>
     </div>
-
   </div>
 </template>
 
 <script>
 import axios from '@/supports/axios'
-import Tab from '@/components/Tab'
 
 export default {
   name: 'Userself',
@@ -82,7 +79,6 @@ export default {
       //
     },
     getUser () {
-      Tab.get('/componets/Tab')
       axios.get('/sanctum/csrf-cookie')
         .then(() => {
           axios.get('/api/user')

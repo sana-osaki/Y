@@ -15,7 +15,11 @@
             <InputText id="password" type="password" v-model="password" />
           </div>
         </div>
-        <span class ="error">{{message}}</span>
+        <span class ="error">
+          <dialog open>{{message}}
+            <button id="close" type="button">close</button>
+          </dialog>
+        </span>
         <div class="p-field">
           <Button icon="pi pi-check" label="Login" v-on:click="login" />
         </div>
@@ -55,6 +59,14 @@ export default {
                 location.href = '/'
               } else {
                 this.message = 'ログインに失敗しました。'
+                const modal = document.querySelector('dialog')
+                modal.showModal()
+                modal.close('Accepted')
+                modal.addEventListener('click', (event) => {
+                  if (event.target === modal) {
+                    modal.close('cancelled')
+                  }
+                })
               }
             })
             .catch((err) => {
@@ -68,6 +80,9 @@ export default {
     }
   }
 }
+/** const modal = document.querySelector('dialog')
+modal.showModal()
+modal.close() */
 </script>
 
 <style lang="scss" scoped>
@@ -93,6 +108,16 @@ export default {
   }
 }
 .error {
-  color: red;
+  color: red
 }
+dialog {
+  padding: 0;
+  border: 0;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 1em black;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.4)
+}
+
 </style>
