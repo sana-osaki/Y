@@ -52,28 +52,17 @@ class UserController extends Controller
      * @param  User  $user
      * @return \Illuminate\Http\Response
      */
-<<<<<<< kaigyou-code2
 
     public function show(User $user)
     {
-<<<<<<< kaigyou-code
-         //return User::with('topics.user', 'comments.user')->find($user->id);
-         //return User::with('topics.user', 'comments.user')->find($user->id);
-         return $user;
-         //return User::with('topics.title' , 'comments.title')->find($user->id);
-    }
-=======
-=======
-    public function show(User $user)
-    {
->>>>>>> local
         // return User::with('topics.user', 'comments.user')->find($user->id);
         return User::with('topics', 'comments')->find($user->id);
         // return $user;
         // return User::with('topics.title' , 'comments.title')->find($user->id);
     }
 
->>>>>>> local
+
+
 
     /**
      * Show the form for editing the specified resource.
