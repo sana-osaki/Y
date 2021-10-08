@@ -51,10 +51,12 @@ class UserController extends Controller
      * @param  User  $user
      * @return \Illuminate\Http\Response
      */
-
-    public function show(User $user)
+     public function show(User $user)
     {
-        return $user;
+        // return User::with('topics.user', 'comments.user')->find($user->id);
+        return User::with('topics', 'comments')->find($user->id);
+        // return $user;
+        // return User::with('topics.title' , 'comments.title')->find($user->id);
     }
 
     /**

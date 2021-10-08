@@ -5,6 +5,7 @@
         {{user.name}}
       </template>
     </Card>
+    <router-view>
     <Tab />  
   </div>
   <Tab />

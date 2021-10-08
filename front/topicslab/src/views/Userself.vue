@@ -5,7 +5,8 @@
         mypage
       </template>
       <template #content>
-        {{user.name}}
+        <!-- {{user.name}} -->
+        {{user.topics}}
       </template>
       <template #footer>
         <Button label="Create Topic" v-on:click="toNewTopic" />

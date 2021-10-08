@@ -20,7 +20,7 @@
           <Button icon="pi pi-check" label="Login" v-on:click="login" />
         </div>
         <div>
-          <a href="Register">新規会員登録はこちら</a>
+          <router-link to="/register">新規会員登録はこちら</router-link>
         </div>
       </template>
     </Card>
