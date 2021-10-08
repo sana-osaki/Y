@@ -3,7 +3,17 @@
     <Card>
       <template #content>
         {{user.name}}
+        {{user.topics}}
+        <!-- {{user.comments.id}} -->
+        <!-- {{topics}} -->
+        <!-- {{user.comments}} -->
+        <!-- {{comments}} -->
       </template>
+      <TabView>
+        <TabPanel header="Header I">{{user.topics}}</TabPanel>
+        <!-- <TabPanel header="Header I">トピック{{user.topics}}</TabPanel> -->
+        <!-- <TabPanel header="Header I">トピック{{user.topic}}</TabPanel> -->
+      </TabView>
     </Card>
   </div>
 </template>
