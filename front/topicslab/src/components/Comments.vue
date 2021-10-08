@@ -3,7 +3,7 @@
     <Fieldset v-for="comment in comments" :key="comment.id">
       <template #legend>
         <span>
-         {{comment.user.name}}
+         <router-link :to="`/user/${comment.user.id}`">{{comment.user.name}}</router-link>
         </span>
       </template>
       <div class="comment-text">
@@ -15,6 +15,9 @@
     </Fieldset>
   </div>
 </template>
+
+import User from '@/components/User'
+import Comments from '@/components/Comments'
 
 <script>
 export default {

@@ -13,9 +13,28 @@
         <TabPanel header="Header I">{{user.topics}}</TabPanel>
         <!-- <TabPanel header="Header I">トピック{{user.topics}}</TabPanel> -->
         <!-- <TabPanel header="Header I">トピック{{user.topic}}</TabPanel> -->
+        <TabPanel header="Header I">トピック</TabPanel>
       </TabView>
     </Card>
   </div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="tab">
+      <button class="tablinks" onclick="openTopic(event, 'Topic1')">Topic1</button>
+      <button class="tablinks" onclick="openTopic(event, 'Topic2')">Topic2</button>
+      <button class="tablinks" onclick="openTopic(event, 'Topic3')">Topic3</button>
+    </div>
+    <div id="Topic1" class="tabcontent">
+      <h3>Topic1</h3>
+      <p>Topic1の内容がここに表示されます。</p>
+    </div>
+    <div id="Topic2" class="tabcontent">
+      <h3>Topic2</h3>
+      <p>Topic2の内容がここに表示されます。</p>
+    </div>
+    <div id="Topic3" class="tabcontent">
+      <h3>Topic3</h3>
+      <p>Topic3の内容がここに表示されます。</p>
+    </div>
 </template>
 
 <script>
@@ -29,9 +48,10 @@ export default {
       user: {}
     }
   },
+
   mounted () {
     if (localStorage.getItem('authenticated') !== 'true') {
-      this.$router.push('login')
+      this.$router.push('/login')
       return
     }
     this.id = this.$route.params.id
@@ -40,6 +60,7 @@ export default {
     }
     this.getUser()
   },
+
   methods: {
     getUser () {
       axios.get('/sanctum/csrf-cookie')
@@ -64,3 +85,32 @@ export default {
   }
 }
 </script>
+
+<style>
+  .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+.tab button.active {
+  background-color: #ccc;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>

@@ -6,11 +6,18 @@
       </template>
     </Card>
     <router-view>
+    <Tab />  
   </div>
+  <Tab />
+
+  </div>
+
 </template>
 
 <script>
 import axios from '@/supports/axios'
+import Tab from '@/components/Tab'
+
 
 export default {
   name: 'user',
